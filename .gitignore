@@ -1,0 +1,22 @@
+# Personal & financial data — never commit
+portfolio/holdings.csv
+portfolio/report.md
+business-ideas/profile.md
+business-ideas/reports/
+
+# Local Claude settings
+.claude/
+
+# Memory directory (symlinked, personal context)
+memory/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
