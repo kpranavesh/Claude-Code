@@ -98,6 +98,26 @@ For any multi-step task:
 
 ---
 
+## GitHub Push Rules
+
+**NEVER push the following to GitHub — these are private:**
+- `business-ideas/profile.md` — contains personal profile, all idea scores, constraints
+- `business-ideas/business-plan/` — contains full business plans with competitive intel
+- `business-ideas/reports/` — contains scouting reports and analysis
+- `memory/` — contains personal context and preferences
+- `portfolio/holdings.csv` — contains financial positions
+
+**Safe to push:**
+- `skills/*.md` — reusable skill templates (no sensitive content)
+- `portfolio/analyzer.py`, `portfolio/deep_dive.py` — scripts only, no data
+- `business-ideas/reddit_scout.py` — script only
+- `CLAUDE.md` — workspace conventions
+- `tasks/todo.md`, `tasks/lessons.md` — task tracking
+
+When asked to "push everything" or "sync to GitHub", always check against this list first. When in doubt, don't push it.
+
+---
+
 ## Code Conventions
 
 - Type hints on all new functions
@@ -129,13 +149,14 @@ Claude Code/
 │   ├── portfolio-analysis.md
 │   └── business-scout.md
 ├── portfolio/
-│   ├── holdings.csv                   ← all 31 positions (~$246K) [gitignored]
+│   ├── holdings.csv                   ← all 31 positions (~$246K) [private, never push]
 │   ├── analyzer.py                    ← python portfolio/analyzer.py --screen
 │   └── deep_dive.py                   ← detailed metrics on specific tickers
 └── business-ideas/
-    ├── profile.md                     ← full personal + business profile [gitignored]
+    ├── profile.md                     ← full personal + business profile [private, never push]
+    ├── business-plan/                 ← business plans [private, never push]
     ├── reddit_scout.py                ← 4-agent Reddit + Claude idea scout
-    └── reports/                       ← saved markdown reports [gitignored]
+    └── reports/                       ← saved markdown reports [private, never push]
 ```
 
 ---
